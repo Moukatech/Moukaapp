@@ -23,16 +23,16 @@ describe Contact do
   end
   it "is invalid with a duplicate email address" do
     Contact.destroy_all
-    create(:contact, email: "shey@gmail.com")
-    contact = build(:contact, email: 'shey@gmail.com')
+    create(:contact, email: "lewismocha@gmail.com")
+    contact = build(:contact, email: 'lewismocha@gmail.com')
     contact.valid?
     expect(contact.errors[:email]).to include("has already been taken")
   end
   it "returns a contact's full name as a string" do
     contact = build(:contact,
-     firstname: 'Jane', lastname: 'Tester'
+     firstname: 'John', lastname: 'Tester'
     )
-    expect(contact.name).to eq "Jane Tester"
+    expect(contact.name).to eq "John Tester"
   end
   it "has a valid factory" do
    expect(build(:contact)).to be_valid

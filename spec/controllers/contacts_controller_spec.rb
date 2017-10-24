@@ -14,9 +14,9 @@ describe ContactsController do
       context 'with params[:letter]' do
         it "populates an array of contacts starting with the letter" do
           lewis = create(:contact, lastname: 'Lewis')
-          mouka = create(:contact, lastname: 'Mouka')
+          james= create(:contact, lastname: 'Mouka')
           get :index, letter: 'A'
-          expect(assigns(:contacts)).to match_array([ajayi])
+          expect(assigns(:contacts)).to match_array([lewis])
         end
         it "renders the :index template" do
           get :index, letter: 'S'

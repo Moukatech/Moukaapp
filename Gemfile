@@ -44,6 +44,9 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'guard',                    '2.13.0'
   gem 'guard-minitest',           '2.4.4'
+  gem "rspec-rails", "~> 3.1.0"
+  gem "factory_girl_rails", "~> 4.4.1"
+  gem "faker", "~> 1.4.3"
 end
 
 group :development do
